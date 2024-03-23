@@ -2,7 +2,7 @@ $blue: #228be6;
 $gray: #495057;
 $pink: #f06595;
 
-// 반복되는 구문을 mixin으로 정의하고 @include로 재사용가능
+// 반복되는 구문을 @mixin으로 정의하고 @include로 재사용가능
 @mixin button-color($color) {
     background: $color;;
     &:hover {
