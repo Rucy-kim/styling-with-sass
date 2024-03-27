@@ -7,13 +7,13 @@ import Modal from "./components/Modal";
 function App() {
   const [isOpen, setIsOpen] = useState(false);
 
-  const openModal = () => {
-    console.log('버킅 클릭!');
-      setIsOpen(true);
-  };
+  const openModal = useCallback(() => {
+    console.log("버킅 클릭!");
+    setIsOpen(true);
+  }, []);
 
   const closeModal = () => {
-      setIsOpen(false);
+    setIsOpen(false);
   };
 
   return (

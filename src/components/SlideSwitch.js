@@ -1,12 +1,9 @@
 import React, { useCallback, useState } from "react";
 import "./SlideSwitch.scss";
 
-const SlideSwitch = ({ backgroundChecked, backgroundUnchecked }) => {
+const SlideSwitch = () => {
   const [isChecked, setIsChecked] = useState(false);
 
-  //   const toggleSwitch = useCallback((isChecked) => {
-  //     setIsChecked(!isChecked);
-  //   }, []);
   const toggleSwitch = useCallback(() => {
     setIsChecked((prevChecked) => !prevChecked);
   }, []);
@@ -17,11 +14,6 @@ const SlideSwitch = ({ backgroundChecked, backgroundUnchecked }) => {
       <span className="slider"></span>
     </label>
   );
-};
-
-SlideSwitch.defaultProps = {
-  backgroundChecked: "blue",
-  backgroundUnchecked: "gray",
 };
 
 export default SlideSwitch;
