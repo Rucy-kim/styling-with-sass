@@ -8,7 +8,6 @@ function App() {
   const [isOpen, setIsOpen] = useState(false);
 
   const openModal = useCallback(() => {
-    console.log("버킅 클릭!");
     setIsOpen(true);
   }, []);
 
