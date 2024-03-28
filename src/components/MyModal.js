@@ -3,6 +3,7 @@ import ReactModal from "react-modal";
 const MyModal = ({ onSubmit, onClose }) => {
   const handleClickSubmit = () => {
     onSubmit();
+    onClose();
   };
 
   const handleClickCancel = () => {

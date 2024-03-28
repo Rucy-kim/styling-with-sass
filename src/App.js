@@ -1,12 +1,16 @@
 import React from "react";
-import MyModal from "./components/MyModal";
 import useModals from "./hooks/useModals";
+import { modals } from "./components/Modals";
 
 function App() {
   const { openModal } = useModals();
 
   const handleClickOpen = () => {
-    openModal(MyModal, { foo: "bar" });
+    openModal(modals.myModal, {
+      onSubmit: () => {
+        console.log("로직 처리부");
+      },
+    });
   };
 
   return (
